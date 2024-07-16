@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(piecenorm)
+library(piecenorms)
 
-test_check("piecenorm")
+test_check("piecenorms")

@@ -3,8 +3,8 @@ Title: Calculate a Piecewise Normalised Score Using Class Intervals
 Version: 0.0.1
 Authors@R: person("David", "Hammond", email = "anotherdavidhammond@gmail.com", role = c("aut", "cre"))
 Author: David Hammond [aut, cre]
-URL: https://github.com/david-hammond/rescaleR
-BugReports: https://github.com/david-hammond/rescaleR
+URL: https://github.com/david-hammond/piecenorms
+BugReports: https://github.com/david-hammond/piecenorms
 Maintainer: David Hammond <anotherdavidhammond@gmail.com>
 Description: This package provides implementation of piecewise normalisation techniques useful when dealing with the communication of skewed and highly skewed data.
 License: MIT + file LICENSE
@@ -18,9 +18,7 @@ Imports:
     dplyr,
     COINr,
     rlang,
-    scales,
-    tidyr,
-    readr
+    scales
 Depends: 
     R (>= 2.10)
 LazyData: true

@@ -4,14 +4,12 @@
 \alias{.get_normalisation}
 \title{Get values goal cuts}
 \usage{
-.get_normalisation(x, brks, polarity)
+.get_normalisation(obs, breaks)
 }
 \arguments{
-\item{x}{A vector of values}
+\item{obs}{A vector of observations}
 
-\item{brks}{The breaks to normalise to}
-
-\item{polarity}{Which direction should the normalisation occur.}
+\item{breaks}{The breaks to normalise to}
 }
 \description{
 Get values goal cuts

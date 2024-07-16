@@ -2,15 +2,26 @@
 % Please edit documentation in R/piecenorm.R
 \name{piecenorm}
 \alias{piecenorm}
-\title{Get values bins}
+\title{Get piecewse normalised values from a vector of observations}
 \usage{
-piecenorm(x, brks, polarity = 1)
+piecenorm(obs, breaks, polarity = 1)
 }
 \arguments{
-\item{x}{A vector of values}
+\item{obs}{A vector of observations.}
 
-\item{method}{The scaling method to use}
+\item{breaks}{The breaks to normalise to.}
+
+\item{polarity}{Which direction should the normalisation occur.}
 }
 \description{
-Get values bins
+Get piecewse normalised values from a vector of observations
+}
+\examples{
+obs <- exp(1:10)
+breaks <- c(min(obs), 8, 20, 100, 1000, 25000)
+y <- piecenorm(obs, breaks)
+plot(obs, y, type = 'l',
+xlab = "Original Values",
+ylab = "Normalised Values")
+
 }

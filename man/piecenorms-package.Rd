@@ -22,13 +22,13 @@ cut into classes and normalised within its class.
 Number of Bins:
 \deqn{ n = \text{length}(\text{brks}) - 1}
 Normalisation Class Intervals:
-\deqn{\left(\frac{i-1}{n}, \frac{i-1}{n} + \frac{1}{n}\right] \forall i \in \{1:n\}}
+\deqn{\left(\frac{i-1}{n}, \frac{i}{n}\right] \forall i \in \{1:n\}}
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/david-hammond/rescaleR}
-  \item Report bugs at \url{https://github.com/david-hammond/rescaleR}
+  \item \url{https://github.com/david-hammond/piecenorms}
+  \item Report bugs at \url{https://github.com/david-hammond/piecenorms}
 }
 
 }

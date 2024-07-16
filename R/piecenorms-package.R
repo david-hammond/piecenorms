@@ -15,7 +15,7 @@
 #' Number of Bins:
 #' \deqn{ n = \text{length}(\text{brks}) - 1}
 #' Normalisation Class Intervals:
-#' \deqn{\left(\frac{i-1}{n}, \frac{i-1}{n} + \frac{1}{n}\right] \forall i \in \{1:n\}}
+#' \deqn{\left(\frac{i-1}{n}, \frac{i}{n}\right] \forall i \in \{1:n\}}
 "_PACKAGE"
 
 ## usethis namespace: start

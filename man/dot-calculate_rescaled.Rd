@@ -4,12 +4,10 @@
 \alias{.calculate_rescaled}
 \title{Calculate the rescaling}
 \usage{
-.calculate_rescaled(tmp, polarity)
+.calculate_rescaled(tmp)
 }
 \arguments{
 \item{tmp}{A preprocessed data frame}
-
-\item{polarity}{Which direction should the normalisation occur.}
 }
 \description{
 Calculate the rescaling
