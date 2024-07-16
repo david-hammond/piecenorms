@@ -13,6 +13,9 @@ piecenorm(obs, breaks, polarity = 1)
 
 \item{polarity}{Which direction should the normalisation occur.}
 }
+\value{
+Vector of normalised observations
+}
 \description{
 Get piecewse normalised values from a vector of observations
 }

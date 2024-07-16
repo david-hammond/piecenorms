@@ -4,12 +4,6 @@
 # piecenorm
 
 <!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/piecenorm)](https://CRAN.R-project.org/package=piecenorm)
-
 <!-- badges: end -->
 
 The goal of piecenorms is to provide implementation of piecewise
@@ -22,6 +16,7 @@ You can install the development version of piecenorm from
 [GitHub](https://github.com/) with:
 
 ``` r
+install.packages('piecenorms')
 # install.packages("devtools")
 devtools::install_github("david-hammond/piecenorm")
 ```
@@ -29,7 +24,7 @@ devtools::install_github("david-hammond/piecenorm")
 ## Example
 
 This is a basic example which shows you how to solve a common
-normalisation problem. There are many mathematical trnsformations that
+normalisation problem. There are many mathematical transformations that
 can be made on skewed data. However, these can be a barrier when
 communicating to a non-technical audience. `piecenorms` allows the use
 to:

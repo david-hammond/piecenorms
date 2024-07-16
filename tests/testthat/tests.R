@@ -24,7 +24,7 @@ test_that("returns correct min greater than 0", {
 
 test_that("returns correct max less than 1", {
   x <- exp(1:10)
-  brks <- c(min(x) - 1, 8, 20, 100, 1000, max(x)+100)
+  brks <- c(min(x) - 1, 8, 20, 100, 1000, max(x) + 100)
   y <- piecenorm(x, brks)
   test <- max(y) < 1
   expect_true(test)

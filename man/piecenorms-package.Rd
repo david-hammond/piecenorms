@@ -28,7 +28,7 @@ Normalisation Class Intervals:
 Useful links:
 \itemize{
   \item \url{https://github.com/david-hammond/piecenorms}
-  \item Report bugs at \url{https://github.com/david-hammond/piecenorms}
+  \item Report bugs at \url{https://github.com/david-hammond/piecenorms/issues}
 }
 
 }
