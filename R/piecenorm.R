@@ -1,3 +1,26 @@
+#' Get values bins
+#'
+#' @param x A vector of values
+#' @param method The scaling method to use
+#'
+#' @importFrom tidyr separate
+#'
+#' @export
+
+piecenorm <- function(x, brks, polarity = 1) {
+  tmp <- x
+  tmp[x < min(brks)] = min(brks)
+  tmp[x > max(brks)] = max(brks)
+  tmp <- data.frame(value = tmp, levels = cut(tmp,
+                                              breaks = brks,
+                                              include.lowest = T)) |>
+    .extract_bins() |>
+    mutate(bins = as.numeric(levels)) |>
+    left_join(.get_scaled_bins(length(brks) - 1), by = "bins") |>
+    .calculate_rescaled(polarity)
+  return(tmp$rescaled)
+}
+
 #' Get values goal cuts
 #'
 #' @param x A vector of values
@@ -26,28 +49,7 @@
            bin_max_threshold = (.data$bins / nbins))
 }
 
-#' Get values bins
-#'
-#' @param x A vector of values
-#' @param method The scaling method to use
-#'
-#' @importFrom tidyr separate
-#'
-#' @export
 
-piecewise_normalisation <- function(x, brks, polarity = 1) {
-  tmp <- x
-  tmp[x < min(brks)] = min(brks)
-  tmp[x > max(brks)] = max(brks)
-  tmp <- data.frame(value = tmp, levels = cut(tmp,
-                                              breaks = brks,
-                                              include.lowest = T)) |>
-    .extract_bins() |>
-    mutate(bins = as.numeric(levels)) |>
-    left_join(.get_scaled_bins(length(brks) - 1), by = "bins") |>
-    .calculate_rescaled(polarity)
-  return(tmp$rescaled)
-}
 
 #' Extract values bins
 #'
