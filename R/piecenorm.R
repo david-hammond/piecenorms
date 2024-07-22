@@ -21,6 +21,9 @@
 #' @export
 
 piecenorm <- function(obs, breaks, polarity = 1) {
+
+  stopifnot("Polarity needs to be either 1 or -1." = polarity %in% c(1,-1))
+
   ### Calculate nbins
   nbins <- length(breaks) - 1
 
@@ -73,7 +76,7 @@ piecenorm <- function(obs, breaks, polarity = 1) {
     ### ungroup
     ungroup()
   ### Switch polarity if needed
-  if (polarity == -1) {
+  if (polarity != 1) {
     tmp$rescaled <- 1 - tmp$rescaled
   }
   return(tmp$rescaled)
