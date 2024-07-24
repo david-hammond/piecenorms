@@ -17,8 +17,6 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-
-
 <!-- badges: end -->
 
 The goal of piecenorms is to provide implementation of piecewise normalisation techniques useful when dealing with the communication of skewed and highly skewed data.
@@ -46,6 +44,7 @@ This is a basic example which shows you how to solve a common normalisation prob
 Example R Code can be found below.
 
 ```{r example}
+set.seed(12345)
 library(piecenorms)
 x <- round(exp(1:10),2)
 brks <- c(min(x), 8, 20, 100, 1000, 25000)
@@ -78,3 +77,37 @@ Definitions of each are as follows:
 -   **Non-Preservation of Relative Magnitudes (Global)**: This refers to the loss of the proportionality of the original data values when normalized. If one value is twice as large as another in the original data, this relationship might not be preserved in the normalized data.
 
 -   **Within-Class Relative Magnitude Preservation**: This indicates that within each class or subset of data, the relative magnitudes of the data points are maintained. If data points are normalized within classes, their relative sizes in relation to each other remain the same as in the original data.
+
+## `normalisr` R6 class
+
+`piecenorms` also provides a `normalisr` R6 class that
+
+-   Classifies the distribution of user data
+-   Recommends a piecewise normalisation technique
+-   Calculates normalised data and the percentiles
+-   Provides plot(), print(), hist() and as.data.frame() methods to allow comparison of original and normalised data.
+-   Provides the user the ability to set Manual normalisation breaks via SetManualBreaks(). This is useful when manual breaks are easier to communicate to a non-technical audience.
+-   Provides an applyto() method that allows the normalisr breask to be applied to different data. Useful when user wished to analyse howe normalised values have changed over time.
+
+An example is provided below:
+
+```{r}
+# Lognormal distribution test
+x <- rlnorm(100)
+y <- rlnorm(100)
+mdl <- normalisr$new(x)
+print(mdl)
+mdl$plot()
+mdl$hist()
+head(mdl$as.data.frame())
+mdl$applyto(y)
+```
+
+```{r}
+# Lognormal distribution test with 3 classes
+mdl <- normalisr$new(x, num_classes = 3)
+print(mdl)
+mdl$plot()
+mdl$hist()
+
+```

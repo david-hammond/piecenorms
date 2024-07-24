@@ -22,7 +22,7 @@
 
 piecenorm <- function(obs, breaks, polarity = 1) {
 
-  stopifnot("Polarity needs to be either 1 or -1." = polarity %in% c(1,-1))
+  stopifnot("Polarity needs to be either 1 or -1." = polarity %in% c(1, -1))
 
   ### Calculate nbins
   nbins <- length(breaks) - 1

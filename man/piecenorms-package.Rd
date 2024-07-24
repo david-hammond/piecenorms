@@ -23,6 +23,17 @@ Number of Bins:
 \deqn{ n = \text{length}(\text{brks}) - 1}
 Normalisation Class Intervals:
 \deqn{\left(\frac{i-1}{n}, \frac{i}{n}\right] \forall i \in \{1:n\}}
+
+\code{piecenorms} also provide a \code{normalisr} R6 class that
+\itemize{
+\item Classifies data into a likely distribution family
+\item Provides a recommendation of an appropriate normalisation technique
+\item Provides functionality to apply this normalisation technique to a
+new data set
+}
+
+This is useful when the user would like to analyse how distributions have
+changed over time.
 }
 \seealso{
 Useful links:
