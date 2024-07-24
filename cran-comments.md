@@ -23,7 +23,11 @@ My development computer is running Ubuntu 24.04.
 
 0 errors \| 0 warnings \| 0 notes
 
-## Test 2:
+## Test 2: Spell Check
+
+`devtools::spell_check()` returns no legitimate spelling errors
+
+## Test 3: Goodpractice
 
 I run `goodpractice::gp()` succesfully with the following message
 
@@ -31,7 +35,7 @@ I run `goodpractice::gp()` succesfully with the following message
 ♥ Ole! Groundbreaking package! Keep up the finest work!
 ```
 
-## Test 3:
+## Test 4: Check
 
 On running: `devtools::check(remote = TRUE, manual = TRUE)`
 
@@ -51,7 +55,7 @@ validation: no command 'tidy' found
 The second note has been suggested not to be an issue.
 <https://stackoverflow.com/questions/74857062/rhub-cran-check-keeps-giving-html-note-on-fedora-test-no-command-tidy-found>
 
-## Test 4:
+## Test 5: Windows
 
 On running:
 
@@ -67,7 +71,7 @@ Days since last update: 6
 
 It is assumed this can be ignored
 
-## Test 5:
+## Test 6: Mac
 
 On running:
 
